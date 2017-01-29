@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.CheckComboBox?>
+<AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS"  xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.petermfc.presenter.FrontPresenter">
+    <children>
+        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+            <children>
+                <HBox fillHeight="false" VBox.vgrow="NEVER">
+                    <children>
+                        <VBox minWidth="70.0">
+                            <children>
+                                <Label prefHeight="25.0" text="Keywords:">
+                                    <padding>
+                                        <Insets left="5.0" right="5.0" />
+                                    </padding>
+                                </Label>
+                                <Label prefHeight="25.0" text="Languages:">
+                                    <padding>
+                                        <Insets left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <TextField id="txtKeywords" fx:id="txtKeywords" prefHeight="25.0">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                                    </padding>
+                                </TextField>
+                                <CheckComboBox id="cbLanguages" fx:id="cbLanguages" prefHeight="25.0">
+                                    <padding>
+                                        <Insets top="5.0" />
+                                    </padding>
+                                </CheckComboBox>
+                            </children>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets top="5.0" />
+                    </padding>
+                </HBox>
+                <HBox fillHeight="false">
+                    <padding>
+                        <Insets top="5.0" />
+                    </padding>
+                </HBox>
+                <VBox>
+                    <children>
+                        <TableView id="tblResults" fx:id="tblResults">
+                            <placeholder>
+                                <Label text="Enter keywords or drag file, then click 'Search' to begin" />
+                            </placeholder>
+                            <columns>
+                                <TableColumn fx:id="colName" prefWidth="172.0" text="Name" />
+                                <TableColumn fx:id="colLanguage" prefWidth="72.0" text="Language" />
+                                <TableColumn fx:id="colFormat" minWidth="0.0" prefWidth="53.0" text="Format" />
+                                <TableColumn fx:id="colLink" prefWidth="193.0" text="Download link" />
+                            </columns>
+                            <padding>
+                                <Insets left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </TableView>
+                    </children>
+                    <padding>
+                        <Insets top="5.0" />
+                    </padding>
+                </VBox>
+                <VBox alignment="CENTER">
+                    <children>
+                        <Button fx:id="btnSearch" defaultButton="true" mnemonicParsing="false" onAction="#searchSubtitles" text="Search!" />
+                        <Button fx:id="btnInterrupt" defaultButton="true" mnemonicParsing="false" onAction="#abortSearchingSubtitles" text="Abort!" visible="false" />
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

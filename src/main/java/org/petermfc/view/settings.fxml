@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="241.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.petermfc.presenter.SettingsPresenter">
+    <children>
+        <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+            <tabs>
+                <Tab text="General">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="180.0" prefWidth="458.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="OpenSubtitles">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                                <CheckBox fx:id="chUserAgent" mnemonicParsing="false" text="Use custom user agent" />
+                                              <HBox>
+                                                  <children>
+                                                      <VBox prefHeight="44.0" prefWidth="94.0">
+                                                          <children>
+                                                              <Label text="App user agent:">
+                                                                  <VBox.margin>
+                                                                      <Insets top="10.0" />
+                                                                  </VBox.margin>
+                                                              </Label>
+                                                          </children>
+                                                      </VBox>
+                                                      <VBox>
+                                                          <children>
+                                                              <TextField fx:id="txtUserAgent">
+                                                                  <VBox.margin>
+                                                                      <Insets top="5.0" />
+                                                                  </VBox.margin>
+                                                              </TextField>
+                                                          </children>
+                                                      </VBox>
+                                                  </children>
+                                              </HBox>
+                                                  <Label text="Warning: messing with user agent can render the app unusable!">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <CheckBox fx:id="chUserCred" mnemonicParsing="false" text="Use custom user credentials">
+                                                    <VBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </VBox.margin>
+                                                </CheckBox>
+                                                <HBox prefHeight="66.0" prefWidth="600.0">
+                                                    <children>
+                                                        <VBox prefHeight="66.0" prefWidth="95.0">
+                                                            <children>
+                                                                <Label text="Username:">
+                                                                    <VBox.margin>
+                                                                        <Insets top="10.0" />
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label text="Password:">
+                                                                    <VBox.margin>
+                                                                        <Insets top="10.0" />
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                            <HBox.margin>
+                                                                <Insets left="5.0" />
+                                                            </HBox.margin>
+                                                        </VBox>
+                                                        <VBox>
+                                                            <children>
+                                                                <TextField fx:id="txtUsername">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="5.0" top="5.0" />
+                                                                    </VBox.margin>
+                                                                </TextField>
+                                                                <PasswordField fx:id="txtPassword">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="5.0" top="5.0" />
+                                                                    </VBox.margin>
+                                                                </PasswordField>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                        </VBox>
+                                    </children>
+                                    <padding>
+                                        <Insets top="5.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <HBox alignment="CENTER_RIGHT" prefHeight="32.0">
+            <children>
+            <Button fx:id="btnRestoreDefaults" disable="true" mnemonicParsing="false" text="Restore defaults">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+                <Button fx:id="btnSave" disable="true" mnemonicParsing="false" text="Save" textAlignment="CENTER">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </HBox>
+      <PasswordField />
+    </children>
+</VBox>

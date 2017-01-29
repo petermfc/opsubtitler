@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.StatusBar?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.petermfc.presenter.AppPresenter">
+   <children>
+      <fx:include source="menu.fxml"/>
+      <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Main">
+               <content>
+                  <fx:include source="front.fxml"/>
+               </content>
+            </Tab>
+            <Tab text="Settings">
+               <content>
+                  <fx:include source="settings.fxml"/>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <StatusBar fx:id="statusBar" text="">
+         <leftItems>
+            <HBox>
+               <children>
+                  <Label fx:id="statusText" prefHeight="17.0" prefWidth="120.0" text="Ready" />
+                  <Label fx:id="statusSavedFilePath" prefHeight="17.0" visible="false" />
+               </children>
+            </HBox>
+         </leftItems>
+         <rightItems>
+            <ProgressBar fx:id="statusOperationIndicator" prefWidth="100.0" visible="false" />
+            <ProgressBar fx:id="statusProgressBar" prefWidth="150.0" progress="0.0" visible="false" />
+         </rightItems>
+      </StatusBar>
+   </children>
+</VBox>
